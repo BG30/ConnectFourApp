@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                     //change image in UI
                     ImageView pos = (ImageView) findViewById(idBoard[row][col]);
                     pos.setImageResource(R.drawable.white_background);
-
+                    chip = switchTurns(chip);
                     Toast.makeText(getApplicationContext(), "Undo",Toast.LENGTH_SHORT).show();
                 }
             }
