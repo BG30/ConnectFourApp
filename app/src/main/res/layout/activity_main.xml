@@ -196,6 +196,7 @@
                 android:src="@drawable/white_background"
                 app:civ_border_color="#FF000000"
                 app:civ_border_width="2dp" />
+
         </TableRow>
 
         <TableRow
@@ -384,84 +385,84 @@
     </TableLayout>
 
     <Button
-        android:id="@+id/Col1Drop"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="36dp"
-        android:text="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
         android:id="@+id/Col2Drop"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="36dp"
-        android:text="2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Col1Drop" />
+        android:background="@android:color/transparent"
+        android:layout_width="51dp"
+        android:layout_height="586dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="47dp"
+        app:layout_constraintStart_toEndOf="@+id/Col1Drop"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Col3Drop"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="36dp"
-        android:text="3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Col2Drop" />
+        android:background="@android:color/transparent"
+        android:layout_width="49dp"
+        android:layout_height="586dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="47dp"
+        app:layout_constraintStart_toEndOf="@+id/Col2Drop"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Col4Drop"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginBottom="36dp"
-        android:text="4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Col3Drop" />
+        android:background="@android:color/transparent"
+        android:layout_width="51dp"
+        android:layout_height="584dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="47dp"
+        app:layout_constraintStart_toEndOf="@+id/Col3Drop"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Col5Drop"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="36dp"
-        android:text="5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Col4Drop" />
+        android:background="@android:color/transparent"
+        android:layout_width="51dp"
+        android:layout_height="585dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="47dp"
+        app:layout_constraintStart_toEndOf="@+id/Col4Drop"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Col6Drop"
+        android:background="@android:color/transparent"
         android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="36dp"
-        android:text="6"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Col5Drop" />
+        android:layout_height="584dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="47dp"
+        app:layout_constraintStart_toEndOf="@+id/Col5Drop"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Col7Drop"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginBottom="36dp"
-        android:text="7"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/Col6Drop" />
+        android:background="@android:color/transparent"
+        android:layout_width="63dp"
+        android:layout_height="583dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="47dp"
+        app:layout_constraintStart_toEndOf="@+id/Col6Drop"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/undoButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="664dp"
         android:text="Undo Last Move"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Col1Drop"
+        android:background="@android:color/transparent"
+        android:layout_width="53dp"
+        android:layout_height="580dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginBottom="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
