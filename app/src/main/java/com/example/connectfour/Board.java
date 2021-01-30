@@ -14,7 +14,7 @@ public class Board {
     private static int ROW_SIZE = 6;
     private static int COLUMN_SIZE = 7;
 
-    private static String chip = "EGG";
+    private static String chip = "Egg";
 
     //Stores moves in history
     Stack<Integer> rowHistory = new <Integer> Stack();
@@ -41,7 +41,7 @@ public class Board {
         if(positionBoard[0][col] == '\u0000'){
             rowPlaced = fillToTop(positionBoard, col, chip);
             ImageView picture = (ImageView) env.findViewById(idBoard[rowPlaced][col]);
-            if(chip == "EGG")
+            if(chip == "Egg")
                 picture.setImageResource(R.drawable.egg);
             else
                 picture.setImageResource(R.drawable.chicken);
@@ -62,7 +62,7 @@ public class Board {
                     a.setImageResource(R.drawable.white_background);
                 }
             }
-            displayWinnerPopup(chip);
+            displayPopup("Congratulations", "The winner is "+chip);
         }
 
         //all positions full: tie
@@ -76,7 +76,7 @@ public class Board {
                     a.setImageResource(R.drawable.white_background);
                 }
             }
-            displayTiePopup(chip);
+            displayPopup("Tough Game", "Match ended in draw");
         }
         //Not in end state, add move to history
         rowHistory.push(rowPlaced);
@@ -116,10 +116,10 @@ public class Board {
         return false;
     }
 
-    private void displayTiePopup(String chip) {
+    private void displayPopup(String title, String message){
         AlertDialog.Builder helpBuilder = new AlertDialog.Builder(env);
-        helpBuilder.setTitle("Tough Game");
-        helpBuilder.setMessage("Match ended in draw");
+        helpBuilder.setTitle(title);
+        helpBuilder.setMessage(message);
         helpBuilder.setPositiveButton("Ok",
                 new DialogInterface.OnClickListener() {
 
@@ -131,29 +131,13 @@ public class Board {
                 });
         AlertDialog helpDialog = helpBuilder.create();
         helpDialog.show();
-    }
 
-    private void displayWinnerPopup(String chip) {
-        AlertDialog.Builder helpBuilder = new AlertDialog.Builder(env);
-        helpBuilder.setTitle("Congratulations");
-        helpBuilder.setMessage("The winner is " + chip);
-        helpBuilder.setPositiveButton("Ok",
-                new DialogInterface.OnClickListener() {
 
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Go to main landing page
-                        Intent intent = new Intent(env, MainActivity2.class);
-                        env.startActivity(intent);
-                    }
-                });
-        AlertDialog helpDialog = helpBuilder.create();
-        helpDialog.show();
     }
 
     private boolean decideWinner(char[][] positionBoard, int row, int col, String chip) {
-        if(checkRow(positionBoard, row, chip)) {
+        if(checkRow(positionBoard, row, chip))
             return true;
-        }
         else if(checkCol(positionBoard, col, row, chip))
             return true;
         else if(checkDiagonalRight(positionBoard, chip))
@@ -228,7 +212,7 @@ public class Board {
     }
 
     private String searchTerm(String chip) {
-        if(chip == "EGG")
+        if(chip == "Egg")
             return "EEEE";
         return "CCCC";
     }
@@ -245,7 +229,7 @@ public class Board {
             row--;
         }
 
-        if(chip == "CHICKEN")
+        if(chip == "Chicken")
             positionBoard[row][col] = 'C';
         else
             positionBoard[row][col] = 'E';
@@ -254,10 +238,10 @@ public class Board {
     }
 
     private String switchTurns(String chip){
-        if (chip == "CHICKEN")
-            return "EGG";
+        if (chip == "Chicken")
+            return "Egg";
         else
-            return "CHICKEN";
+            return "Chicken";
     }
 
     private void displayPlayerTurn() {
